@@ -1,0 +1,18 @@
+s = input("Enter a string: ")
+flk = False
+for i in range(2,len(s)):
+    if 64<ord(s[i])<91 and  64<ord(s[i-1])<91 and 64<ord(s[i-2])<91:
+        flk = True
+        
+up = ""
+lw = ""      
+for i in range(len(s)):
+    
+    if 64<ord(s[i])<91:
+        up = up + s[i]
+    elif 96<ord(s[i])<123:
+        lw = lw+ s[i]
+if flk is True:
+    print(up)
+else:
+    print(lw)

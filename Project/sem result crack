@@ -1,0 +1,14 @@
+current_sem_data = {"John": [4.0, 3.7, 4.0], "Tom": [3.3, 3.7, 4.0], "Harry": [3.3, 3.7, 4.0]}
+
+previous_sem_data = {"John": [3.88, 90], "Tom": [3.52, 70], "Harry": [3.25, 85]}
+
+name = input()
+cr_total = 0
+
+credit_total = previous_sem_data[name][1] + (3*len(current_sem_data[name]))
+
+for i in current_sem_data[name]:
+    cr_total += float(i)*3
+print(
+    f"****DATA for {name}****\n Previous semester's completed credits: {previous_sem_data[name][1]}\n Previous semester's CGPA: {previous_sem_data[name][0]}\n Total Credits completed including current semester: {credit_total}\n Current semester's total GPA: {cr_total}\n Current semester's CGPA: {(cr_total + (previous_sem_data[name][0]*previous_sem_data[name][1]))/(credit_total)}")
+

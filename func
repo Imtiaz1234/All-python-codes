@@ -1,0 +1,18 @@
+
+def functon(x):
+    x = int(x)
+    p = ''
+    for i in range(x):
+        if(i == 0):
+            p += f"{'#'*(x-1)}{'A'*(x)}\n"[::-1]
+            
+        elif(i == (x-1)):
+            p += f"{'A'*(x)}\n" [::-1]
+            
+        else:
+            p += f"{'#'*(x-i-1)}A{'*'*(x-2)}A\n"[::-1]
+    print(p[::-1])
+
+val = input()
+functon(val)
+

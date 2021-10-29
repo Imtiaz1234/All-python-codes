@@ -1,0 +1,9 @@
+inp1 = int(input("Enter a number: "))
+inp2 = int(input("Enter a number: "))
+k = ""
+sum1 = ""
+for i in range(1,inp1+1):
+    inp2 -= 1
+    k += str(i)
+    inp1 += k + "="*inp2 + '\n'
+print(inp1,end="")

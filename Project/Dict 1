@@ -1,0 +1,30 @@
+dict1 = {'a': 100, 'b': 100, 'c': 200, 'd': 300}
+
+dict2 = {'a': 300, 'b': 200, 'd': 400, 'e': 200}
+
+myDict = {}
+li = []
+
+for x,y in dict1.items(): 
+    if x not in myDict.keys():
+        myDict.update({x : int(y)})
+    else:
+        myDict[x] += int(y)
+
+for x,y in dict2.items():
+    if x not in myDict.keys():
+        myDict.update({x : int(y)})
+    else:
+        myDict[x] += int(y)
+        
+print(myDict)
+
+for x in myDict.values():
+    if x not in li:
+        li.append(x)
+
+        
+li.sort()        
+myTup = tuple(li)
+
+print(myTup)       
